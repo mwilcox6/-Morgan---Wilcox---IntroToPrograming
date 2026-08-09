@@ -1,2 +1,1 @@
-code the dream 
-by Morgan Wilcox
+Morgan Wilcox
