@@ -6,8 +6,8 @@ body {
 }
 
 .navigation { 
- background-color: #EDEAE5;
- color: #2F2F30;
+ background-color: #17352D;
+ color: #F5F3EC;
  padding: 0px;
  border: 2px solid #DCD8D0;
  display: flex;
@@ -18,7 +18,7 @@ body {
 }
 
 .navigation a { 
- color: #2F2F30;
+ color: #F5F3EC;
  text-decoration: none;
  font-size: 12px;
  letter-spacing: .5px;
@@ -35,11 +35,11 @@ body {
 }
 
 .navigation a:hover {
-    color: #635936;
+    color: #91AA99;
 }
 
 .name-heading{
-  color: #635936;
+  color:#17352D;
   font-size: 50px;
   font-style: oblique;
   font-weight: 500;
@@ -49,14 +49,14 @@ body {
 .about-heading {
     font-size: 35px;
     font-weight: 400;
-    color: #2F2F30;
+    color: #17352D;
     text-align: center;
     
 }
 
 #About {
-    background-color: #EDEAE5;
-    color: #35454E;
+    background-color: #F1EFE8;
+    color: #292929;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: auto;
@@ -64,7 +64,7 @@ body {
     padding: 5px;
     border-width: 2px;
     border-style: solid;
-    border-color: #DCD8D0;
+    border-color: CCD2C8;
     text-align: center;
   
 }
@@ -89,7 +89,7 @@ body {
     padding: 20px;
     margin: 10px;
     border: 1px solid #635936;
-    background-color: #35454E;
+    background-color:  #17352D;
 }
 
 .experience-item {
@@ -111,7 +111,7 @@ body {
 }
 
 .work-dates {
-  color: #DBDDBD;
+  color: #91AA99;
 }
 
 
@@ -123,14 +123,14 @@ body {
    margin-right: auto;
    padding: 5px;
    text-align: center;
-   background-color: #946644;
-   color: #DCD8D0;
+   background-color: #17352D;
+   color:#CCD2C8;
    border: 2px solid #2F2F30;
     
 }
 
 .connect-heading{
-  color: #EDEAE5;
+  color: #F5F3EC;
 }
 
 #Connect ul {
@@ -142,42 +142,53 @@ body {
     
 }
 
-#Skills {
-
-   margin-top: 20px;
-   margin-bottom: 20px;
-   margin-left: auto;
-   margin-right: auto;
-   padding: 5px;
-   background-color: #DCD8D0;
-   color: #35454E;
-   border: 2px solid #35454E;
-    
+.skillsandprojectgroup {
+    display: flex;
+    list-style: none;
 }
 
 .skills-heading{ 
-  color: #2F2F30;
-}
+    color: #17352D;
+    text-align: left;
+    padding: 2px;
+    margin: 2px;
+  }
 
-#Projects {
+#Skills {
 
-   margin-top: 20px;
-   margin-bottom: 20px;
+   margin-top: 12px;
+   margin-bottom: 12px;
    margin-left: auto;
    margin-right: auto;
-   padding: 5px;
-   background-color: #DCD8D0;
-   color: #35454E;
-   border: 2px solid #35454E;
+   background-color: #F1EFE8;
+   color: #292929;
+   padding: 2px;
+   border: 2px solid #23483D;
+    
+}
+
+#Skills ul{
+ list-style-type: circle;
+ list-style-position: inside;
+ padding: 1px;
 }
 
 .projects-heading {
-  color: #2F2F30;
+    color:#17352D;
+  }
+
+#Projects {
+
+   margin-top: 12px;
+   margin-bottom: 12px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 2px;
+   background-color: #F1EFE8;
+   color: #292929;
+   border: 2px solid #23483D;
 }
 
-.skillsandprojectgroup {
-    display: flex;
-}
 
 #githubIcon {
     width: 40px;
