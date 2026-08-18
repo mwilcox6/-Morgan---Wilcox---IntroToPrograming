@@ -1,0 +1,190 @@
+body {
+    background-color: #EDEAE5;
+    color: #292929;
+    font-family: 'Raleway';
+    margin: 0;
+}
+
+.navigation { 
+ background-color: #EDEAE5;
+ color: #2F2F30;
+ padding: 0px;
+ border: 2px solid #DCD8D0;
+ display: flex;
+ list-style: none;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+}
+
+.navigation a { 
+ color: #2F2F30;
+ text-decoration: none;
+ font-size: 12px;
+ letter-spacing: .5px;
+ text-transform: uppercase;
+}
+
+.navigation ul { 
+ display: flex;
+ align-items: center;
+ list-style: none;
+ margin: 0 auto;
+ padding: 15px 0;
+ gap: 30px;
+}
+
+.navigation a:hover {
+    color: #635936;
+}
+
+.name-heading{
+  color: #635936;
+  font-size: 50px;
+  font-style: oblique;
+  font-weight: 500;
+  text-align: center;
+}
+
+.about-heading {
+    font-size: 35px;
+    font-weight: 400;
+    color: #2F2F30;
+    text-align: center;
+    
+}
+
+#About {
+    background-color: #EDEAE5;
+    color: #35454E;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #DCD8D0;
+    text-align: center;
+  
+}
+
+#Experience {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+
+}
+
+.experience-heading {
+  color: #EDEAE5;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.experience-block {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #635936;
+    background-color: #35454E;
+}
+
+.experience-item {
+    padding: 30px 0;
+    border-bottom: 1px solid #5E5532;
+}
+
+.experience-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #EDEAE5;
+}
+
+.experience-description {
+    max-width: 700px;
+    margin-top: 15px;
+    color: #DCD8D0;
+}
+
+.work-dates {
+  color: #DBDDBD;
+}
+
+
+#Connect {
+
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 5px;
+   text-align: center;
+   background-color: #946644;
+   color: #DCD8D0;
+   border: 2px solid #2F2F30;
+    
+}
+
+.connect-heading{
+  color: #EDEAE5;
+}
+
+#Connect ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 5px;
+    
+    
+}
+
+#Skills {
+
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 5px;
+   background-color: #DCD8D0;
+   color: #35454E;
+   border: 2px solid #35454E;
+    
+}
+
+.skills-heading{ 
+  color: #2F2F30;
+}
+
+#Projects {
+
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 5px;
+   background-color: #DCD8D0;
+   color: #35454E;
+   border: 2px solid #35454E;
+}
+
+.projects-heading {
+  color: #2F2F30;
+}
+
+.skillsandprojectgroup {
+    display: flex;
+}
+
+#githubIcon {
+    width: 40px;
+    height: 40px;
+}
+
+#linkedinIcon {
+    width: 40px;
+    height: 40px;
+}
