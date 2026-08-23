@@ -189,6 +189,72 @@ body {
    border: 2px solid #23483D;
 }
 
+#Message {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #EDEAE5;
+    color: #35454E;
+    border: 2px solid #35454E;
+}
+
+.message-heading {
+    color: #2F2F30;
+    text-align: center;
+}
+
+
+#Message form {
+    display: flex;
+    flex-direction: column;
+}
+
+#Message label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+#Message input,
+#Message textarea {
+    padding: 10px;
+    border: 1px solid #35454E;
+    font-family: inherit;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#Message textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#Message button {
+    margin-top: 12px;
+    padding: 12px 20px;
+    min-height: 24px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#messages {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #DCD8D0;
+    color: #35454E;
+    border: 2px solid #35454E;
+}
+
+#messages-heading {
+    color: #2F2F30;
+}
+
+#messages li {
+    margin-bottom: 15px;
+}
 
 #githubIcon {
     width: 40px;
@@ -198,4 +264,23 @@ body {
 #linkedinIcon {
     width: 40px;
     height: 40px;
+}
+
+@media (max-width: 600px) {
+
+    #Message {
+        padding: 15px;
+    }
+
+    #Message input,
+    #Message textarea {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    #Message button {
+        width: 100%;
+        min-height: 44px;
+    }
+
 }
