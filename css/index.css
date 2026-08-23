@@ -189,7 +189,7 @@ body {
    border: 2px solid #23483D;
 }
 
-#Message {
+#leave_message {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: auto;
@@ -206,19 +206,19 @@ body {
 }
 
 
-#Message form {
+#leave_message form {
     display: flex;
     flex-direction: column;
 }
 
-#Message label {
+#leave_message label {
     margin-top: 10px;
     margin-bottom: 5px;
     font-weight: 500;
 }
 
-#Message input,
-#Message textarea {
+#leave_message input,
+#leave_message textarea {
     padding: 10px;
     border: 1px solid #35454E;
     font-family: inherit;
@@ -226,12 +226,12 @@ body {
     box-sizing: border-box;
 }
 
-#Message textarea {
+#leave_message textarea {
     min-height: 120px;
     resize: vertical;
 }
 
-#Message button {
+#leave_message button {
     margin-top: 12px;
     padding: 12px 20px;
     min-height: 24px;
@@ -248,12 +248,28 @@ body {
     border: 2px solid #35454E;
 }
 
-#messages-heading {
+#messages h2 {
     color: #2F2F30;
 }
 
 #messages li {
     margin-bottom: 15px;
+}
+
+#messages li a {
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+#messages li span {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+#messages li button {
+    margin-left: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
 }
 
 #githubIcon {
@@ -268,17 +284,17 @@ body {
 
 @media (max-width: 600px) {
 
-    #Message {
+    #leave_message {
         padding: 15px;
     }
 
-    #Message input,
-    #Message textarea {
+    #leave_message input,
+    #leave_message textarea {
         width: 100%;
         font-size: 16px;
     }
 
-    #Message button {
+    #leave_message button {
         width: 100%;
         min-height: 44px;
     }
