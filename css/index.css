@@ -187,6 +187,7 @@ body {
    background-color: #F1EFE8;
    color: #292929;
    border: 2px solid #23483D;
+   display: flex;
 }
 
 #leave_message {
