@@ -67,3 +67,25 @@ messageForm.addEventListener("submit" , function (event)
 
     event.target.reset();
 });
+
+fetch("https://api.github.com/users/mwilcox6/repos")
+.then(function(response) {
+
+    if (!response.ok) {
+        throw new Error(response.status);
+    }
+
+    return response.json();
+
+})
+.then(function(data) {
+    const repositories = data;
+    console.log(repositories);
+
+})
+.catch(function(error) {
+
+    console.error(error);
+
+});
+
