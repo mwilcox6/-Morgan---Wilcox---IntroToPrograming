@@ -102,6 +102,8 @@ for (let i = 0; i < repositories.length ; i++ ) {
 
 console.error(error)
 
+projectList.innerText = "Unable to load projects.";
+
 });
 
 
