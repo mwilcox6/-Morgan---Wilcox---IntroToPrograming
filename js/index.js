@@ -67,3 +67,43 @@ messageForm.addEventListener("submit" , function (event)
 
     event.target.reset();
 });
+
+fetch ("https://api.github.com/users/mwilcox6/repos") 
+.then(function(response){
+ 
+    if (!response.ok){
+        throw new Error(response.status);
+    }
+    
+    return response.json();
+
+})
+
+.then(function (data){
+    const repositories = data;
+    console.log(repositories);
+
+    let projectSection = document.getElementById('Projects');
+
+let projectList = projectSection.querySelector('ul');
+
+for (let i = 0; i < repositories.length ; i++ ) {
+
+    const project = document.createElement('li');
+
+    project.innerText = repositories[i].name;
+
+    projectList.appendChild(project);
+}
+
+})
+
+.catch(function(error) {
+
+console.error(error)
+
+projectList.innerText = "Unable to load projects.";
+
+});
+
+

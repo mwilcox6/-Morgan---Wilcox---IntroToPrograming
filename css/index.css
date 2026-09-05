@@ -64,7 +64,7 @@ body {
     padding: 5px;
     border-width: 2px;
     border-style: solid;
-    border-color: CCD2C8;
+    border-color: #CCD2C8;
     text-align: center;
   
 }
@@ -189,6 +189,17 @@ body {
    border: 2px solid #23483D;
 }
 
+
+@media (max-width: 600px) {
+#Projects ul {
+    padding-left: 20px;
+    display: flex;
+}
+
+#Projects li {
+    margin-bottom: 10px;
+}
+
 #leave_message {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -237,6 +248,7 @@ body {
     min-height: 24px;
     font-size: 16px;
     cursor: pointer;
+}
 }
 
 #messages {
