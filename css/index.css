@@ -1,240 +1,385 @@
+/* =========================
+   Corporate + Creative theme
+   Navy structure, warm paper, sage accent
+   ========================= */
+
+:root {
+    --ink: #122033;
+    --navy: #1B3358;
+    --paper: #F6F1EA;
+    --card: #FFFbf7;
+    --muted: #5A6574;
+    --line: #D9D0C4;
+    --sage: #6F8F7A;
+    --sage-dark: #456352;
+    --gold: #C4A574;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #EDEAE5;
-    color: #292929;
-    font-family: 'Raleway';
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 17px;
+}
+
+/* Skip default list bullets where we use custom layouts */
+ul {
     margin: 0;
 }
 
-.navigation { 
- background-color: #17352D;
- color: #F5F3EC;
- padding: 0px;
- border: 2px solid #DCD8D0;
- display: flex;
- list-style: none;
- position: sticky;
- top: 0;
- z-index: 1000;
+a {
+    color: var(--sage-dark);
 }
 
-.navigation a { 
- color: #F5F3EC;
- text-decoration: none;
- font-size: 12px;
- letter-spacing: .5px;
- text-transform: uppercase;
+a:hover {
+    color: var(--sage);
 }
 
-.navigation ul { 
- display: flex;
- align-items: center;
- list-style: none;
- margin: 0 auto;
- padding: 15px 0;
- gap: 30px;
+/* =========================
+   Sticky Navigation
+   ========================= */
+
+.navigation {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--ink);
+    border-bottom: 3px solid var(--sage);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 14px 24px;
+    gap: 8px 28px;
+}
+
+.navigation a {
+    color: var(--paper);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
 }
 
 .navigation a:hover {
-    color: #91AA99;
+    color: var(--gold);
 }
 
-.name-heading{
-  color:#17352D;
-  font-size: 50px;
-  font-style: oblique;
-  font-weight: 500;
-  text-align: center;
+/* =========================
+   Header / Name
+   ========================= */
+
+header {
+    text-align: center;
+    padding: 56px 20px 28px;
 }
+
+.name-heading {
+    font-family: "Fraunces", serif;
+    color: var(--ink);
+    font-size: 56px;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: -0.5px;
+    margin: 0 0 8px;
+}
+
+header img {
+    display: block;
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    margin: 20px auto 0;
+    border-radius: 50%;
+    border: 3px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--sage);
+}
+
+/* =========================
+   Main layout
+   ========================= */
+
+main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 10px 24px 64px;
+}
+
+section {
+    margin: 28px 0;
+}
+
+h2 {
+    font-family: "Fraunces", serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--navy);
+    margin: 0 0 16px;
+}
+
+/* =========================
+   About
+   ========================= */
 
 .about-heading {
-    font-size: 35px;
-    font-weight: 400;
-    color: #17352D;
     text-align: center;
-    
 }
 
 #About {
-    background-color: #F1EFE8;
-    color: #292929;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #CCD2C8;
+    background-color: var(--card);
+    color: var(--ink);
+    padding: 36px 40px;
+    border: 1px solid var(--line);
+    border-left: 6px solid var(--sage);
     text-align: center;
-  
 }
 
-#Experience {
-
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-
+#About p {
+    max-width: 640px;
+    margin: 0 auto;
+    color: var(--muted);
 }
+
+/* =========================
+   Experience (flexbox layout)
+   ========================= */
 
 .experience-heading {
-  color: #EDEAE5;
-  text-align: center;
-  margin-bottom: 2px;
+    color: var(--paper);
+    text-align: left;
+    margin-bottom: 8px;
 }
 
 .experience-block {
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid #635936;
-    background-color:  #17352D;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 32px;
+    background-color: var(--ink);
+    color: var(--paper);
 }
 
 .experience-item {
-    padding: 30px 0;
-    border-bottom: 1px solid #5E5532;
+    display: flex;
+    flex-direction: column;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(196, 165, 116, 0.35);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 .experience-title {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    color: #EDEAE5;
+    gap: 16px;
+    color: var(--paper);
 }
 
-.experience-description {
-    max-width: 700px;
-    margin-top: 15px;
-    color: #DCD8D0;
+.experience-title h3 {
+    font-family: "Fraunces", serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 0 4px;
+}
+
+.experience-title p {
+    margin: 0;
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
 }
 
 .work-dates {
-  color: #91AA99;
+    color: var(--sage) !important;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
+.experience-description {
+    max-width: 760px;
+    margin: 14px 0 0;
+    color: #D8D2C8;
+    font-size: 15.5px;
+}
+
+/* =========================
+   Skills + Projects row
+   ========================= */
+
+.skillsandprojectgroup {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+}
+
+#Skills,
+#Projects {
+    flex: 1;
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    padding: 28px;
+}
+
+.skills-heading,
+.projects-heading {
+    color: var(--navy);
+}
+
+/* Skills list: flexbox chips */
+#Skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+#Skills li {
+    background-color: var(--ink);
+    color: var(--paper);
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+/* Projects list: stacked cards */
+#Projects ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+#Projects li {
+    background-color: var(--paper);
+    border-left: 4px solid var(--sage);
+    padding: 12px 14px;
+    color: var(--ink);
+    font-weight: 600;
+}
+
+/* =========================
+   Connect (flexbox layout)
+   ========================= */
 
 #Connect {
-
-   margin-top: 20px;
-   margin-bottom: 20px;
-   margin-left: auto;
-   margin-right: auto;
-   padding: 5px;
-   text-align: center;
-   background-color: #17352D;
-   color:#CCD2C8;
-   border: 2px solid #2F2F30;
-    
+    background-color: var(--navy);
+    color: var(--paper);
+    text-align: center;
+    padding: 36px 24px;
 }
 
-.connect-heading{
-  color: #F5F3EC;
+.connect-heading {
+    color: var(--paper);
 }
 
 #Connect ul {
     display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
-    gap: 30px;
-    margin: 5px;
-    
-    
+    gap: 28px;
+    padding: 8px 0 0;
 }
 
-.skillsandprojectgroup {
+#emailIcon,
+#githubIcon,
+#linkedinIcon {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: var(--white);
+}
+
+#emailIcon {
     display: flex;
-    list-style: none;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink);
+    font-family: "Fraunces", serif;
+    font-size: 22px;
+    font-weight: 500;
+    text-decoration: none;
 }
 
-.skills-heading{ 
-    color: #17352D;
-    text-align: left;
-    padding: 2px;
-    margin: 2px;
-  }
-
-#Skills {
-
-   margin-top: 12px;
-   margin-bottom: 12px;
-   margin-left: auto;
-   margin-right: auto;
-   background-color: #F1EFE8;
-   color: #292929;
-   padding: 2px;
-   border: 2px solid #23483D;
-    
+#Connect a:hover img,
+#Connect a:hover #emailIcon {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
 }
 
-#Skills ul{
- list-style-type: circle;
- list-style-position: inside;
- padding: 1px;
-}
-
-.projects-heading {
-    color:#17352D;
-  }
-
-#Projects {
-
-   margin-top: 12px;
-   margin-bottom: 12px;
-   margin-left: auto;
-   margin-right: auto;
-   padding: 2px;
-   background-color: #F1EFE8;
-   color: #292929;
-   border: 2px solid #23483D;
-}
-
-
-@media (max-width: 600px) {
-#Projects ul {
-    padding-left: 20px;
-    display: flex;
-}
-
-#Projects li {
-    margin-bottom: 10px;
-}
+/* =========================
+   Leave a Message form
+   ========================= */
 
 #leave_message {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    background-color: #EDEAE5;
-    color: #35454E;
-    border: 2px solid #35454E;
+    background-color: var(--card);
+    color: var(--ink);
+    padding: 32px;
+    border: 1px solid var(--line);
 }
 
 .message-heading {
-    color: #2F2F30;
-    text-align: center;
+    text-align: left;
 }
-
 
 #leave_message form {
     display: flex;
     flex-direction: column;
+    max-width: 560px;
 }
 
 #leave_message label {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-weight: 500;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.4px;
 }
 
 #leave_message input,
 #leave_message textarea {
-    padding: 10px;
-    border: 1px solid #35454E;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    background-color: var(--white);
+    color: var(--ink);
     font-family: inherit;
     font-size: 16px;
-    box-sizing: border-box;
+}
+
+#leave_message input:focus,
+#leave_message textarea:focus {
+    outline: 2px solid var(--navy);
+    border-color: var(--navy);
 }
 
 #leave_message textarea {
@@ -243,72 +388,192 @@ body {
 }
 
 #leave_message button {
-    margin-top: 12px;
-    padding: 12px 20px;
-    min-height: 24px;
-    font-size: 16px;
+    margin-top: 18px;
+    width: fit-content;
+    padding: 12px 22px;
+    border: none;
+    background-color: var(--ink);
+    color: var(--paper);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
     cursor: pointer;
 }
+
+#leave_message button:hover {
+    background-color: var(--sage);
 }
 
+/* =========================
+   Messages list (flexbox)
+   ========================= */
+
 #messages {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #DCD8D0;
-    color: #35454E;
-    border: 2px solid #35454E;
+    background-color: var(--card);
+    color: var(--ink);
+    padding: 32px;
+    border: 1px solid var(--line);
 }
 
 #messages h2 {
-    color: #2F2F30;
+    color: var(--navy);
+}
+
+#messages ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
 }
 
 #messages li {
-    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    padding: 16px;
+    background-color: var(--paper);
+    border-left: 4px solid var(--gold);
 }
 
 #messages li a {
-    font-weight: 600;
-    margin-right: 8px;
+    font-weight: 700;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+#messages li a:hover {
+    color: var(--sage);
 }
 
 #messages li span {
-    display: inline-block;
-    margin-right: 12px;
+    flex: 1 1 220px;
+    color: var(--muted);
 }
 
 #messages li button {
-    margin-left: 8px;
-    padding: 6px 12px;
+    margin-left: auto;
+    padding: 8px 14px;
+    border: 1px solid var(--ink);
+    background-color: transparent;
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
     cursor: pointer;
 }
 
-#githubIcon {
-    width: 40px;
-    height: 40px;
+#messages li button:hover {
+    background-color: var(--ink);
+    color: var(--paper);
 }
 
-#linkedinIcon {
-    width: 40px;
-    height: 40px;
+/* =========================
+   Footer (created in index.js)
+   ========================= */
+
+footer {
+    background-color: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 28px 16px;
+    border-top: 3px solid var(--sage);
 }
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+}
+
+/* =========================
+   Tablet
+   ========================= */
+
+@media (max-width: 800px) {
+    .skillsandprojectgroup {
+        flex-direction: column;
+    }
+
+    .experience-title {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+/* =========================
+   Mobile: hamburger nav + stacking
+   ========================= */
 
 @media (max-width: 600px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        margin: 8px 12px 8px auto;
+        cursor: pointer;
+    }
 
-    #leave_message {
-        padding: 15px;
+    .hamburger span,
+    .hamburger::before,
+    .hamburger::after {
+        display: block;
+        height: 2px;
+        background-color: var(--paper);
+        content: "";
+    }
+
+    .navigation ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 20px 20px;
+        gap: 14px;
+    }
+
+    .nav-toggle:checked ~ ul {
+        display: flex;
+    }
+
+    .name-heading {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    main {
+        padding: 10px 16px 48px;
+    }
+
+    #About,
+    .experience-block,
+    #Skills,
+    #Projects,
+    #leave_message,
+    #messages {
+        padding: 22px 18px;
+    }
+
+    header img {
+        width: 104px;
+        height: 104px;
+        box-shadow: 6px 6px 0 var(--sage);
     }
 
     #leave_message input,
-    #leave_message textarea {
-        width: 100%;
-        font-size: 16px;
-    }
-
+    #leave_message textarea,
     #leave_message button {
         width: 100%;
         min-height: 44px;
     }
-
 }

@@ -10,11 +10,11 @@ body.appendChild(footer);
 
 const copyright = document.createElement('p')
 
-copyright.innerHTML = "Morgan Wilcox" +  ' ' + thisYear;
+copyright.innerText = "© Morgan Wilcox" + ' ' + thisYear;
 
 footer.appendChild(copyright);
 
-const skills = [ "JavaScript" , "HTML", "CSS" , "Adobe Photoshop" , "Adobe Premier Pro" , "SOQL"];
+const skills = [ "JavaScript" , "HTML", "CSS" , "Adobe Photoshop" , "Adobe Premiere Pro" , "SOQL"];
 
 const skillsSection = document.getElementById('Skills')
 
@@ -35,10 +35,6 @@ messageForm.addEventListener("submit" , function (event)
     let inputName = event.target.usersName.value;
     let inputEmail = event.target.usersEmail.value;
     let inputMessage = event.target.usersMessage.value;
-
-    console.log(inputName);
-    console.log(inputEmail);
-    console.log(inputMessage);
 
     let messageSection = document.getElementById('messages');
     let messageList = messageSection.querySelector('ul');
@@ -68,6 +64,10 @@ messageForm.addEventListener("submit" , function (event)
     event.target.reset();
 });
 
+let projectSection = document.getElementById('Projects');
+
+let projectList = projectSection.querySelector('ul');
+
 fetch ("https://api.github.com/users/mwilcox6/repos") 
 .then(function(response){
  
@@ -81,11 +81,7 @@ fetch ("https://api.github.com/users/mwilcox6/repos")
 
 .then(function (data){
     const repositories = data;
-    console.log(repositories);
-
-    let projectSection = document.getElementById('Projects');
-
-let projectList = projectSection.querySelector('ul');
+   
 
 for (let i = 0; i < repositories.length ; i++ ) {
 

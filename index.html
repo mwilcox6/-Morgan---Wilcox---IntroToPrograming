@@ -7,27 +7,31 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Morgan Wilcox">
+        <meta charset="UTF-8">
 
-        <link href = "css/index.css" rel = "stylesheet">
         <link href = "css/index.css" rel = "stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     </head>
 
 <body>
 
 
- <nav class = "navigation"> 
+ <nav class = "navigation">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="hamburger" aria-label="Open navigation menu">
+        <span></span>
+    </label>
     <ul>
-        <li> <a href = "#About"> About </a> </li> 
+        <li> <a href = "#About"> About </a> </li>
         <li> <a href = "#Experience"> Experience </a> </li>
         <li> <a href = "#Skills"> Skills </a> </li>
         <li> <a href = "#Projects"> Projects </a> </li>
         <li> <a href = "#Connect"> Connect </a> </li>
         <li> <a href = "#leave_message"> Leave a Message</a></li>
-
+        <li> <a href = "soccer.html"> Soccer World </a> </li>
     </ul>
 </nav>
 
@@ -35,7 +39,7 @@
     <header>
 
     <h1 class = "name-heading"> Morgan Wilcox</h1>
-    <img src = "images/headshot.JPG" width="100" height="100" alt = "headshot of Morgan Wilcox smiling in a pink blouse" style="display: block; margin: auto;">
+    <img src = "images/headshot.JPG" width="100" height="100" alt = "headshot of Morgan Wilcox smiling in a pink blouse">
 
 </header>
 
@@ -82,7 +86,9 @@
             </div>
 
             <p class = "experience-description"> Conducted technical discovery sessions to assess customer architectures, business requirements, pain points, and integration needs, translating findings into actionable Oracle Cloud solutions and deployment plans. Designed and presented customized cloud architecture recommendations through solution demonstrations, proof-of-concepts, and hands-on configuration guidance to accelerate customer adoption and time-to-value. Drove account health through proactive optimization reviews, adoption analysis, and roadmap planning, aligning customer objectives with Oracle Cloud capabilities. Partnered closely with Sales and Engineering teams to develop technical proposals and solutions that contributed to approximately $1M in annual revenue.
- </p> 
+ </p>
+
+</div>
 
 </div>
 
@@ -110,6 +116,12 @@
 <section id = "Connect">
     <h2 class = "connect-heading"> Connect </h2>
     <ul>
+        <li>
+        <a href = "mailto:morganwilcox6@gmail.com" aria-label = "Email Morgan Wilcox">
+        <span id = "emailIcon">@</span>
+        </a>
+        </li>
+
         <li>  
         <a href = "https://github.com/mwilcox6">
         <img  id = "githubIcon" src = "images/github.png" alt = "Github Icon">  </a>  
@@ -134,13 +146,11 @@
 
     <label for = "usersEmail">Email:</label>
     <input type = "email" id = "usersEmail" name = "usersEmail" required>
-    <br>
-    <br>
+    
 
     <label for = "usersMessage">Message:</label>
     <textarea name = "usersMessage" id = "usersMessage" required></textarea>
-    <br>
-    <br>
+    
 
     <button type = "submit">Submit</button>
 

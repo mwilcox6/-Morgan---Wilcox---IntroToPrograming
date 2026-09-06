@@ -1,0 +1,254 @@
+/* =========================
+   Soccer Page
+   Matches index.css: navy, paper, sage
+   ========================= */
+
+:root {
+    --ink: #122033;
+    --navy: #1B3358;
+    --paper: #F6F1EA;
+    --card: #FFFbf7;
+    --muted: #5A6574;
+    --line: #D9D0C4;
+    --sage: #6F8F7A;
+    --sage-dark: #456352;
+    --gold: #C4A574;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 17px;
+}
+
+ul {
+    margin: 0;
+}
+
+/* Back to Portfolio */
+
+body > a {
+    display: inline-block;
+    margin: 25px 30px 10px;
+    color: var(--sage-dark);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+body > a:hover {
+    color: var(--sage);
+}
+
+/* Main Content */
+
+main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 10px 24px 64px;
+}
+
+/* Page Heading */
+
+.heading {
+    font-family: "Fraunces", serif;
+    color: var(--ink);
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    text-align: center;
+    margin: 20px 0 40px;
+}
+
+/* Sections */
+
+#teams,
+#players {
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-left: 6px solid var(--sage);
+    padding: 32px;
+    margin-bottom: 28px;
+}
+
+/* Section Headings */
+
+.section-heading {
+    font-family: "Fraunces", serif;
+    color: var(--navy);
+    font-size: 32px;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+/* Search Area */
+
+#team-input {
+    width: 70%;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    background-color: var(--white);
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 16px;
+}
+
+#team-input:focus {
+    outline: 2px solid var(--navy);
+    border-color: var(--navy);
+}
+
+/* Buttons */
+
+#teams-button,
+#clear-teams,
+#back-to-teams {
+    padding: 12px 22px;
+    border: none;
+    background-color: var(--ink);
+    color: var(--paper);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#teams-button:hover,
+#clear-teams:hover,
+#back-to-teams:hover {
+    background-color: var(--sage);
+    color: var(--paper);
+}
+
+/* Team List */
+
+#team-list,
+#player-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+/* Team / Player Items */
+
+#team-list li,
+#player-list li {
+    padding: 14px 16px;
+    background-color: var(--paper);
+    color: var(--ink);
+    font-weight: 600;
+    border-left: 4px solid var(--sage);
+}
+
+/* Teams are clickable */
+
+#team-list li {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#team-list li:hover {
+    background-color: var(--ink);
+    color: var(--paper);
+    transform: translateX(4px);
+}
+
+/* Players */
+
+#player-list li {
+    border-left: 4px solid var(--gold);
+}
+
+/* Clear Button */
+
+#clear-teams {
+    margin-top: 5px;
+}
+
+/* Back to Teams */
+
+#back-to-teams {
+    margin-top: 10px;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 28px 16px;
+    border-top: 3px solid var(--sage);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+}
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 600px) {
+
+    body > a {
+        margin: 20px;
+        font-size: 12px;
+    }
+
+    main {
+        padding: 10px 16px 48px;
+    }
+
+    .heading {
+        font-size: 34px;
+        margin-bottom: 30px;
+    }
+
+    #teams,
+    #players {
+        padding: 22px 18px;
+    }
+
+    .section-heading {
+        font-size: 26px;
+    }
+
+    #team-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #teams-button,
+    #clear-teams,
+    #back-to-teams {
+        width: 100%;
+        min-height: 44px;
+        margin-top: 8px;
+    }
+
+    #team-list li,
+    #player-list li {
+        padding: 14px;
+    }
+}
