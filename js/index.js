@@ -68,8 +68,8 @@ messageForm.addEventListener("submit" , function (event)
     event.target.reset();
 });
 
-// Ensure Projects DOM targets exist before performing the fetch
-var projectSection = document.getElementById('Projects') || document.querySelector('main') || document.body;
+// Select the Projects section and its list as the assignment expects
+var projectSection = document.getElementById('Projects');
 var projectList = projectSection ? projectSection.querySelector('ul') : null;
 
 fetch ("https://api.github.com/users/mwilcox6/repos") 
@@ -83,14 +83,10 @@ fetch ("https://api.github.com/users/mwilcox6/repos")
     const repositories = data;
     console.log(repositories);
 
-    // ensure a list exists to render into
+    // If the expected list doesn't exist in #Projects, abort and log an error
     if (!projectList) {
-        projectList = document.createElement('ul');
-        if (projectSection) {
-            projectSection.appendChild(projectList);
-        } else {
-            document.body.appendChild(projectList);
-        }
+        console.error('Projects list (<ul>) not found inside #Projects. Cannot render repositories.');
+        return;
     }
 
     // render the repositories into the list
@@ -110,7 +106,7 @@ fetch ("https://api.github.com/users/mwilcox6/repos")
     if (projectSection) {
         projectSection.appendChild(errorMessage);
     } else {
-        document.body.appendChild(errorMessage);
+        console.error('Projects section (#Projects) not found; unable to display error message.');
     }
 });
 // end
