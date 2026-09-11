@@ -219,64 +219,64 @@ body {
 
 
 @media (max-width: 600px) {
-#Projects ul {
-    padding-left: 20px;
-    display: flex;
-}
+    /* Mobile adjustments for Projects and Leave Message */
+    #Projects ul {
+        padding-left: 12px;
+        grid-template-columns: 1fr;
+    }
 
-#Projects li {
-    margin-bottom: 10px;
-}
+    #Projects li {
+        margin-bottom: 10px;
+    }
 
-#leave_message {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    background-color: #EDEAE5;
-    color: #35454E;
-    border: 2px solid #35454E;
-}
+    #leave_message {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        background-color: #EDEAE5;
+        color: #35454E;
+        border: 2px solid #35454E;
+    }
 
-.message-heading {
-    color: #2F2F30;
-    text-align: center;
-}
+    .message-heading {
+        color: #2F2F30;
+        text-align: center;
+    }
 
+    #leave_message form {
+        display: flex;
+        flex-direction: column;
+    }
 
-#leave_message form {
-    display: flex;
-    flex-direction: column;
-}
+    #leave_message label {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-weight: 500;
+    }
 
-#leave_message label {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-weight: 500;
-}
+    #leave_message input,
+    #leave_message textarea {
+        padding: 10px;
+        border: 1px solid #35454E;
+        font-family: inherit;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
 
-#leave_message input,
-#leave_message textarea {
-    padding: 10px;
-    border: 1px solid #35454E;
-    font-family: inherit;
-    font-size: 16px;
-    box-sizing: border-box;
-}
+    #leave_message textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
 
-#leave_message textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-#leave_message button {
-    margin-top: 12px;
-    padding: 12px 20px;
-    min-height: 24px;
-    font-size: 16px;
-    cursor: pointer;
-}
+    #leave_message button {
+        margin-top: 12px;
+        padding: 12px 20px;
+        min-height: 24px;
+        font-size: 16px;
+        cursor: pointer;
+    }
 }
 
 #messages {
@@ -323,7 +323,7 @@ body {
 }
 
 @media (max-width: 600px) {
-
+    /* Ensure leave_message inputs and button fill width on very small screens */
     #leave_message {
         padding: 15px;
     }
@@ -338,5 +338,4 @@ body {
         width: 100%;
         min-height: 44px;
     }
-
 }

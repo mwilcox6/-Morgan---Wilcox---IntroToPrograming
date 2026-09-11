@@ -68,6 +68,10 @@ messageForm.addEventListener("submit" , function (event)
     event.target.reset();
 });
 
+// Ensure Projects DOM targets exist before performing the fetch
+var projectSection = document.getElementById('Projects') || document.querySelector('main') || document.body;
+var projectList = projectSection ? projectSection.querySelector('ul') : null;
+
 fetch ("https://api.github.com/users/mwilcox6/repos") 
 .then(function(response){
     if (!response.ok){
@@ -79,7 +83,17 @@ fetch ("https://api.github.com/users/mwilcox6/repos")
     const repositories = data;
     console.log(repositories);
 
-    // render the repositories into the already-selected projectList
+    // ensure a list exists to render into
+    if (!projectList) {
+        projectList = document.createElement('ul');
+        if (projectSection) {
+            projectSection.appendChild(projectList);
+        } else {
+            document.body.appendChild(projectList);
+        }
+    }
+
+    // render the repositories into the list
     projectList.innerHTML = '';
     for (let i = 0; i < repositories.length ; i++ ) {
         const project = document.createElement('li');
@@ -89,16 +103,16 @@ fetch ("https://api.github.com/users/mwilcox6/repos")
 })
 .catch(function(error) {
     console.error(error);
-    // show a safe error message appended to the Projects container
+    // show a safe error message appended to a guaranteed DOM target
     const errorMessage = document.createElement('p');
     errorMessage.className = 'fetch-error';
     errorMessage.innerText = 'Unable to load projects.';
-    // If the list is empty or missing, append the message to the section
-    projectSection.appendChild(errorMessage);
+    if (projectSection) {
+        projectSection.appendChild(errorMessage);
+    } else {
+        document.body.appendChild(errorMessage);
+    }
 });
-
-// Hoisted selections so both success and error handlers can use them
-var projectSection = document.getElementById('Projects');
-var projectList = projectSection ? projectSection.querySelector('ul') : null;
+// end
 
 
