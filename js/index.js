@@ -70,40 +70,35 @@ messageForm.addEventListener("submit" , function (event)
 
 fetch ("https://api.github.com/users/mwilcox6/repos") 
 .then(function(response){
- 
     if (!response.ok){
         throw new Error(response.status);
     }
-    
     return response.json();
-
 })
-
-.then(function (data){
+.then(function(data){
     const repositories = data;
     console.log(repositories);
 
-    let projectSection = document.getElementById('Projects');
-
-let projectList = projectSection.querySelector('ul');
-
-for (let i = 0; i < repositories.length ; i++ ) {
-
-    const project = document.createElement('li');
-
-    project.innerText = repositories[i].name;
-
-    projectList.appendChild(project);
-}
-
+    // render the repositories into the already-selected projectList
+    projectList.innerHTML = '';
+    for (let i = 0; i < repositories.length ; i++ ) {
+        const project = document.createElement('li');
+        project.innerText = repositories[i].name;
+        projectList.appendChild(project);
+    }
 })
-
 .catch(function(error) {
-
-console.error(error)
-
-projectList.innerText = "Unable to load projects.";
-
+    console.error(error);
+    // show a safe error message appended to the Projects container
+    const errorMessage = document.createElement('p');
+    errorMessage.className = 'fetch-error';
+    errorMessage.innerText = 'Unable to load projects.';
+    // If the list is empty or missing, append the message to the section
+    projectSection.appendChild(errorMessage);
 });
+
+// Hoisted selections so both success and error handlers can use them
+var projectSection = document.getElementById('Projects');
+var projectList = projectSection ? projectSection.querySelector('ul') : null;
 
 

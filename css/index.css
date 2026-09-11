@@ -189,6 +189,34 @@ body {
    border: 2px solid #23483D;
 }
 
+/* Projects list base styling */
+#Projects ul {
+    list-style: none;
+    margin: 0;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    align-items: start;
+}
+
+#Projects li {
+    background: #FFFFFF;
+    border: 1px solid #CCD2C8;
+    padding: 10px 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.fetch-error {
+    color: #7B2B2B;
+    background: #FCEAEA;
+    padding: 8px 12px;
+    border: 1px solid #F1C0C0;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
 
 @media (max-width: 600px) {
 #Projects ul {
